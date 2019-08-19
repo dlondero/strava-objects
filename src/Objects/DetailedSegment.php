@@ -63,7 +63,7 @@ class DetailedSegment
         $instance->state = (string)$parameters['state'];
         $instance->country = (string)$parameters['country'];
         $instance->private = (bool)$parameters['private'];
-        $instance->athletePrEffort = is_array($parameters['athlete_pr_effort']) ? SummarySegmentEffort::create($parameters['athlete_pr_effort']) : null;
+        $instance->athletePrEffort = isset($parameters['athlete_pr_effort']) ? SummarySegmentEffort::create($parameters['athlete_pr_effort']) : null;
         $instance->createdAt = StravaDateTimeImmutable::createFromISO8601($parameters['created_at']);
         $instance->updatedAt = StravaDateTimeImmutable::createFromISO8601($parameters['updated_at']);
         $instance->totalElevationGain = (float)$parameters['total_elevation_gain'];

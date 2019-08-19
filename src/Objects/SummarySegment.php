@@ -14,10 +14,10 @@ class SummarySegment
     private float $elevationLow;
     private ?LatLng $startLatLng;
     private ?LatLng $endLatLng;
-    private float $startLatitude;
-    private float $startLongitude;
-    private float $endLatitude;
-    private float $endLongitude;
+    private ?float $startLatitude;
+    private ?float $startLongitude;
+    private ?float $endLatitude;
+    private ?float $endLongitude;
     private int $climbCategory;
     private string $city;
     private string $state;
@@ -45,18 +45,18 @@ class SummarySegment
         $instance->elevationLow = (float)$parameters['elevation_low'];
         $instance->startLatLng = is_array($parameters['start_latlng']) ? LatLng::create($parameters['start_latlng']) : null;
         $instance->endLatLng = is_array($parameters['end_latlng']) ? LatLng::create($parameters['end_latlng']) : null;
-        $instance->startLatitude = (float)$parameters['start_latitude'];
-        $instance->startLongitude = (float)$parameters['start_longitude'];
-        $instance->endLatitude = (float)$parameters['end_latitude'];
-        $instance->endLongitude = (float)$parameters['end_longitude'];
+        $instance->startLatitude = isset($parameters['start_latitude']) ? (float)$parameters['start_latitude'] : null;
+        $instance->startLongitude = isset($parameters['start_longitude']) ? (float)$parameters['start_longitude'] : null;
+        $instance->endLatitude = isset($parameters['end_latitude']) ? (float)$parameters['end_latitude'] : null;
+        $instance->endLongitude = isset($parameters['end_longitude']) ? (float)$parameters['end_longitude'] : null;
         $instance->climbCategory = (int)$parameters['climb_category'];
         $instance->city = (string)$parameters['city'];
         $instance->state = (string)$parameters['state'];
         $instance->country = (string)$parameters['country'];
         $instance->private = (bool)$parameters['private'];
-        $instance->hazardous = (bool)$parameters['hazardous'];
-        $instance->starred = (bool)$parameters['starred'];
-        $instance->athletePrEffort = is_array($parameters['athlete_pr_effort']) ? SummarySegmentEffort::create($parameters['athlete_pr_effort']) : null;
+        $instance->hazardous = isset($parameters['hazardous']) ? (bool)$parameters['hazardous'] : false;
+        $instance->starred = isset($parameters['starred']) ? (bool)$parameters['starred'] : false;
+        $instance->athletePrEffort = isset($parameters['athlete_pr_effort']) ? SummarySegmentEffort::create($parameters['athlete_pr_effort']) : null;
 
         return $instance;
     }

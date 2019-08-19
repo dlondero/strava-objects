@@ -7,7 +7,7 @@ class DetailedGear
     private int $id;
     private int $resourceState;
     private bool $primary;
-    private string $name;
+    private ?string $name;
     private float $distance;
     private string $brandName;
     private string $modelName;
@@ -25,7 +25,7 @@ class DetailedGear
         $instance->id = (int)$parameters['id'];
         $instance->resourceState = (int)$parameters['resource_state'];
         $instance->primary = (bool)$parameters['primary'];
-        $instance->name = (string)$parameters['name'];
+        $instance->name = isset($parameters['name']) ? (string)$parameters['name'] : null;
         $instance->distance = (float)$parameters['distance'];
         $instance->brandName = (string)$parameters['brand_name'];
         $instance->modelName = (string)$parameters['model_name'];

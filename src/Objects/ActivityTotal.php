@@ -24,7 +24,7 @@ class ActivityTotal
         $instance->movingTime = (int)$parameters['moving_time'];
         $instance->elapsedTime = (int)$parameters['elapsed_time'];
         $instance->elevationGain = (float)$parameters['elevation_gain'];
-        $instance->achievementCount = $parameters['achievement_count'] ? (int)$parameters['achievement_count'] : null;
+        $instance->achievementCount = isset($parameters['achievement_count']) ? (int)$parameters['achievement_count'] : null;
 
         return $instance;
     }

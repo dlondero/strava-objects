@@ -21,7 +21,7 @@ class Lap
     private float $maxSpeed;
     private int $movingTime;
     private string $name;
-    private int $paceZone;
+    private ?int $paceZone;
     private int $split;
     private DateTimeImmutable $startDate;
     private DateTimeImmutable $startDateLocal;
@@ -51,13 +51,13 @@ class Lap
         $instance->maxSpeed = (float)$parameters['max_speed'];
         $instance->movingTime = (int)$parameters['moving_time'];
         $instance->name = (string)$parameters['name'];
-        $instance->paceZone = (int)$parameters['pace_zone'];
+        $instance->paceZone = isset($parameters['pace_zone']) ? (int)$parameters['pace_zone'] : null;
         $instance->split = (int)$parameters['split'];
         $instance->startDate = StravaDateTimeImmutable::createFromISO8601($parameters['start_date']);
         $instance->startDateLocal = StravaDateTimeImmutable::createFromISO8601($parameters['start_date_local']);
         $instance->totalElevationGain = (float)$parameters['total_elevation_gain'];
-        $instance->averageHeartrate = $parameters['average_heartrate'] ? (float)$parameters['average_heartrate'] : null;
-        $instance->maxHeartrate = $parameters['max_heartrate'] ? (float)$parameters['max_heartrate'] : null;
+        $instance->averageHeartrate = isset($parameters['average_heartrate']) ? (float)$parameters['average_heartrate'] : null;
+        $instance->maxHeartrate = isset($parameters['max_heartrate']) ? (float)$parameters['max_heartrate'] : null;
 
         return $instance;
     }

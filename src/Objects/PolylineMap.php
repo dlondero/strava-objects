@@ -5,8 +5,8 @@ namespace StravaObjects\Objects;
 class PolylineMap
 {
     private string $id;
-    private string $polyline;
-    private string $summaryPolyline;
+    private ?string $polyline;
+    private ?string $summaryPolyline;
 
     private function __construct()
     {
@@ -17,8 +17,8 @@ class PolylineMap
         $instance = new self();
 
         $instance->id = (string)$parameters['id'];
-        $instance->polyline = (string)$parameters['polyline'];
-        $instance->summaryPolyline = (string)$parameters['summaryPolyline'];
+        $instance->polyline = isset($parameters['polyline']) ? (string)$parameters['polyline'] : null;
+        $instance->summaryPolyline = isset($parameters['summaryPolyline']) ? (string)$parameters['summaryPolyline'] : null;
 
         return $instance;
     }

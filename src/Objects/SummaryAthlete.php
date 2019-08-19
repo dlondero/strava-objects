@@ -9,7 +9,7 @@ class SummaryAthlete
 {
     private int $id;
     private string $username;
-    private int $resourceState;
+    private ?int $resourceState;
     private string $firstName;
     private string $lastName;
     private string $profileMedium;
@@ -36,7 +36,7 @@ class SummaryAthlete
 
         $instance->id = (int)$parameters['id'];
         $instance->username = (string)$parameters['username'];
-        $instance->resourceState = (int)$parameters['resource_state'];
+        $instance->resourceState = isset($parameters['resource_state']) ? (int)$parameters['resource_state'] : null;
         $instance->firstName = (string)$parameters['firstname'];
         $instance->lastName = (string)$parameters['lastname'];
         $instance->profileMedium = (string)$parameters['profile_medium'];
@@ -60,7 +60,7 @@ class SummaryAthlete
     {
         $instance = new self();
 
-        $instance->resourceState = (int)$parameters['resource_state'];
+        $instance->resourceState = isset($parameters['resource_state']) ? (int)$parameters['resource_state'] : null;
         $instance->firstName = (string)$parameters['firstname'];
         $instance->lastName = (string)$parameters['lastname'];
 

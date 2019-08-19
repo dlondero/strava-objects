@@ -42,7 +42,7 @@ class DetailedSegmentEffort
         $instance->startDate = StravaDateTimeImmutable::createFromISO8601($parameters['start_date']);
         $instance->startDateLocal = StravaDateTimeImmutable::createFromISO8601($parameters['start_date_local']);
         $instance->distance = (float)$parameters['distance'];
-        $instance->isKom = (bool)$parameters['is_kom'];
+        $instance->isKom = isset($parameters['is_kom']) ? (bool)$parameters['is_kom'] : false;
         $instance->name = (string)$parameters['name'];
         $instance->activity = MetaActivity::create($parameters['activity']);
         $instance->athlete = MetaAthlete::create($parameters['athlete']);
@@ -52,8 +52,8 @@ class DetailedSegmentEffort
         $instance->averageCadence = $parameters['average_cadence'] ? (float)$parameters['average_cadence'] : null;
         $instance->averageWatts = $parameters['average_watts'] ? (float)$parameters['average_watts'] : null;
         $instance->deviceWatts = $parameters['device_watts'] ? (bool)$parameters['device_watts'] : null;
-        $instance->averageHeartrate = $parameters['average_heartrate'] ? (float)$parameters['average_heartrate'] : null;
-        $instance->maxHeartrate = $parameters['max_heartrate'] ? (float)$parameters['max_heartrate'] : null;
+        $instance->averageHeartrate = isset($parameters['average_heartrate']) ? (float)$parameters['average_heartrate'] : null;
+        $instance->maxHeartrate = isset($parameters['max_heartrate']) ? (float)$parameters['max_heartrate'] : null;
         $instance->segment = SummarySegment::create($parameters['segment']);
         $instance->komRank = $parameters['kom_rank'] ? (int)$parameters['kom_rank'] : null;
         $instance->prRank = $parameters['pr_rank'] ? (int)$parameters['pr_rank'] : null;

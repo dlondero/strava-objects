@@ -12,8 +12,8 @@ use StravaObjects\Util\StravaDateTimeImmutable;
 class DetailedActivity
 {
     private int $id;
-    private int $resourceState;
-    private int $externalId;
+    private ?int $resourceState;
+    private ?int $externalId;
     private int $uploadId;
     private MetaAthlete $athlete;
     private string $name;
@@ -21,8 +21,8 @@ class DetailedActivity
     private int $movingTime;
     private int $elapsedTime;
     private float $totalElevationGain;
-    private float $elevationHigh;
-    private float $elevationLow;
+    private ?float $elevationHigh;
+    private ?float $elevationLow;
     private ActivityType $type;
     private DateTimeImmutable $startDate;
     private DateTimeImmutable $startDateLocal;
@@ -42,7 +42,7 @@ class DetailedActivity
     private bool $private;
     private bool $flagged;
     private ?int $workoutType;
-    private string $uploadIdString;
+    private ?string $uploadIdString;
     private float $averageSpeed;
     private float $maxSpeed;
     private bool $hasKudoed;
@@ -73,17 +73,17 @@ class DetailedActivity
         $instance = new self();
 
         $instance->id = (int)$parameters['id'];
-        $instance->resourceState = (int)$parameters['resourceState'];
-        $instance->externalId = (int)$parameters['externalId'];
-        $instance->uploadId = (int)$parameters['uploadId'];
+        $instance->resourceState = isset($parameters['resource_state']) ? (int)$parameters['resource_state'] : null;
+        $instance->externalId = isset($parameters['external_id']) ? (int)$parameters['external_id'] : null;
+        $instance->uploadId = (int)$parameters['upload_id'];
         $instance->athlete = MetaAthlete::create($parameters['athlete']);
         $instance->name = (string)$parameters['name'];
         $instance->distance = (float)$parameters['distance'];
         $instance->movingTime = (int)$parameters['moving_time'];
         $instance->elapsedTime = (int)$parameters['elapsed_time'];
         $instance->totalElevationGain = (float)$parameters['total_elevation_gain'];
-        $instance->elevationHigh = (float)$parameters['elevation_high'];
-        $instance->elevationLow = (float)$parameters['elevation_low'];
+        $instance->elevationHigh = isset($parameters['elevation_high']) ? (float)$parameters['elevation_high'] : null;
+        $instance->elevationLow = isset($parameters['elevation_low']) ? (float)$parameters['elevation_low'] : null;
         $instance->type = ActivityType::create($parameters['type']);
         $instance->startDate = StravaDateTimeImmutable::createFromISO8601($parameters['start_date']);
         $instance->startDateLocal = StravaDateTimeImmutable::createFromISO8601($parameters['start_date_local']);
@@ -103,7 +103,7 @@ class DetailedActivity
         $instance->private = (bool)$parameters['private'];
         $instance->flagged = (bool)$parameters['flagged'];
         $instance->workoutType = $parameters['workout_type'] ? (int)$parameters['workout_type'] : null;
-        $instance->uploadIdString = (string)$parameters['upload_id_string'];
+        $instance->uploadIdString = isset($parameters['upload_id_string']) ? (string)$parameters['upload_id_string'] : null;
         $instance->averageSpeed = (float)$parameters['average_speed'];
         $instance->maxSpeed = (float)$parameters['max_speed'];
         $instance->hasKudoed = (bool)$parameters['has_kudoed'];
@@ -121,9 +121,9 @@ class DetailedActivity
         $instance->deviceName = (string)$parameters['device_name'];
         $instance->embedToken = (string)$parameters['embed_token'];
         $instance->splitsMetric = $parameters['splits_metric'] ? Collection::create($parameters['splits_metric'], SplitCollection::class) : null;
-        $instance->splitsStandard = $parameters['splits_standard'] ? Collection::create($parameters['splits_standard'], SplitCollection::class) : null;
-        $instance->laps = $parameters['laps'] ? Collection::create($parameters['laps'], LapCollection::class) : null;
-        $instance->bestEfforts = $parameters['best_efforts'] ? Collection::create($parameters['best_efforts'], DetailedSegmentEffortCollection::class) : null;
+        $instance->splitsStandard = isset($parameters['splits_standard']) ? Collection::create($parameters['splits_standard'], SplitCollection::class) : null;
+        $instance->laps = isset($parameters['laps']) ? Collection::create($parameters['laps'], LapCollection::class) : null;
+        $instance->bestEfforts = isset($parameters['best_efforts']) ? Collection::create($parameters['best_efforts'], DetailedSegmentEffortCollection::class) : null;
 
         return $instance;
     }

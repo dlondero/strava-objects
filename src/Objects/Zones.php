@@ -15,8 +15,8 @@ class Zones
     {
         $instance = new self();
 
-        $instance->heartRate = $parameters['heart_rate'] ? HeartRateZoneRanges::create($parameters['heart_rate']) : null;
-        $instance->power = $parameters['power'] ? PowerZoneRanges::create($parameters['power']) : null;
+        $instance->heartRate = isset($parameters['heart_rate']) ? HeartRateZoneRanges::create($parameters['heart_rate']) : null;
+        $instance->power = isset($parameters['power']) ? PowerZoneRanges::create($parameters['power']) : null;
 
         return $instance;
     }
