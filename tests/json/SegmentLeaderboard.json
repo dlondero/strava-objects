@@ -1,0 +1,13 @@
+{
+  "effort_count" : 30756,
+  "entry_count" : 30756,
+  "kom_type" : "kom",
+  "entries" : [ {
+    "athlete_name" : "Peter S.",
+    "elapsed_time" : 346,
+    "moving_time" : 346,
+    "start_date" : "1993-04-03T15:37:43Z",
+    "start_date_local" : "1993-04-03T07:37:43Z",
+    "rank" : 1
+  } ]
+}

@@ -1,0 +1,30 @@
+{
+    "name": "dlondero/strava-objects",
+    "description": "PHP Data Transfer Objects to interact with Strava API V3",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Daniel Londero",
+            "email": "daniel.londero@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.4",
+        "ext-json": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8",
+        "phpstan/phpstan": "^0.11.15"
+    },
+    "autoload": {
+        "psr-4": {
+            "StravaObjects\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\StravaObjects\\": "tests/"
+        }
+    }
+}
