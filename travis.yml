@@ -1,17 +1,19 @@
 language: php
 
-php:
-  - '7.4snapshot'
-
 matrix:
   fast_finish: true
+  include:
+    - php: 7.4snapshot
+    - php: nightly
 
 cache:
   directories:
     - $HOME/.composer/cache
 
 before_script:
-  - travis_retry composer install -n
+  - composer install -n
 
 script:
   - vendor/bin/phpunit
+
+sudo: false
