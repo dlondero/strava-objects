@@ -10,7 +10,7 @@ cache:
   directories:
     - $HOME/.composer/cache
 
-before_script:
+install:
   - composer install -n
 
 script:
