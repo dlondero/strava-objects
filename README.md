@@ -1,4 +1,4 @@
-# Strava Objects
+# StravaObjects
 [![Build Status](https://travis-ci.org/dlondero/strava-objects.svg?branch=master)](https://travis-ci.org/dlondero/strava-objects)
 
 TL;DR PHP model classes for Strava V3 API responses
@@ -63,8 +63,10 @@ create with a specific response from the API.**
 // `DetailedActivity`. So we can use its response to create an instance of
 // that model provided by StravaObjects.
 
+use StravaObjects\Objects\DetailedActivity;
+
 $response = $client->getActivityById(12345);
-$detailedActivity = \StravaObjects\Objects\DetailedActivity::create($response);
+$detailedActivity = DetailedActivity::create($response);
 ```
 
 Now we can use this data in a structured way thanks to the accessors of 
@@ -81,8 +83,12 @@ elements.
 // According to Strava docs `getLoggedInAthleteActivities` returns an 
 // array of `SummaryActivity` objects. Creating the related collection
 // is a one liner operation.
+
+use StravaObjects\Collections\Collection;
+use StravaObjects\Objects\SummaryActivity;
+
 $response = $client->getLoggedInAthleteActivities();
-$summaryActivityCollection = \StravaObjects\Collections\Collection::create($response, \StravaObjects\Objects\SummaryActivity::class);
+$summaryActivityCollection = Collection::create($response, SummaryActivity::class);
 ```
 
 ## Development
