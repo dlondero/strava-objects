@@ -15,10 +15,10 @@ class RunningRace
     private string $city;
     private string $state;
     private string $country;
-    private array $routeIds;
+    private ?array $routeIds;
     private string $measurementPreference;
     private string $url;
-    private string $websiteUrl;
+    private ?string $websiteUrl;
 
     private function __construct()
     {
@@ -36,10 +36,10 @@ class RunningRace
         $instance->city = (string)$parameters['city'];
         $instance->state = (string)$parameters['state'];
         $instance->country = (string)$parameters['country'];
-        $instance->routeIds = (array)$parameters['route_ids'];
+        $instance->routeIds = isset($parameters['route_ids']) ? (array)$parameters['route_ids'] : null;
         $instance->measurementPreference = (string)$parameters['measurement_preference'];
         $instance->url = (string)$parameters['url'];
-        $instance->websiteUrl = (string)$parameters['website_url'];
+        $instance->websiteUrl = isset($parameters['website_url']) ? (string)$parameters['website_url'] : null;
 
         return $instance;
     }

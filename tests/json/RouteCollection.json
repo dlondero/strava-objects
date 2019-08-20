@@ -1,0 +1,54 @@
+[
+  {
+    "private": true,
+    "distance": 0.8008282,
+    "athlete": "",
+    "description": "aeiou",
+    "elevation_gain": 6.0274563,
+    "type": 5,
+    "segments": [
+      {
+        "country": "aeiou",
+        "private": true,
+        "distance": 9.301444,
+        "average_grade": 3.6160767,
+        "maximum_grade": 2.027123,
+        "climb_category": 1,
+        "city": "aeiou",
+        "elevation_high": 4.145608,
+        "athlete_pr_effort": {
+          "distance": 6.846853,
+          "start_date_local": "2000-01-23T04:56:07Z",
+          "elapsed_time": 1,
+          "is_kom": true,
+          "id": 1,
+          "start_date": "2000-01-23T04:56:07Z"
+        },
+        "start_latlng": "",
+        "elevation_low": 7.386282,
+        "end_latlng": "",
+        "activity_type": "Ride",
+        "name": "aeiou",
+        "id": 7,
+        "state": "aeiou"
+      }
+    ],
+    "starred": true,
+    "directions": [
+      {
+        "distance": 7.4577446,
+        "name": "aeiou",
+        "action": 1
+      }
+    ],
+    "sub_type": 2,
+    "name": "aeiou",
+    "id": 1,
+    "map": {
+      "summary_polyline": "aeiou",
+      "id": "aeiou",
+      "polyline": "aeiou"
+    },
+    "timestamp": 5
+  }
+]

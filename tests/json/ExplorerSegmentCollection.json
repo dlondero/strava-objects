@@ -1,0 +1,62 @@
+[
+  {
+    "id": 99243,
+    "resource_state": 2,
+    "name": "Hawk Hill Saddle",
+    "climb_category": 0,
+    "climb_category_desc": "NC",
+    "avg_grade": -0.0,
+    "start_latlng": [
+      37.77407,
+      -122.439427
+    ],
+    "end_latlng": [
+      37.774038,
+      -122.439445
+    ],
+    "elev_difference": 279.3,
+    "distance": 1768.8,
+    "points": "ih|eFppqjVvAQr@Nx@\\lBdAj@Pj@Nn@Fn@Bt@?^Qr@qA^i@`@M^\\FXB~B?rCRr@hArA^r@@^Qj@g@x@c@h@a@FgA?mDDw@P_An@gBv@{@n@c@r@wArA_@n@Ip@Hf@^bALh@Cx@Yn@Mv@Lh@r@p@Xr@El@MZm@l@_Ad@g@ZWn@m@fF",
+    "starred": false
+  },
+  {
+    "id": 578907,
+    "resource_state": 2,
+    "name": "Cinderella Trail DH",
+    "climb_category": 0,
+    "climb_category_desc": "NC",
+    "avg_grade": -15.1,
+    "start_latlng": [
+      37.816572,
+      -122.182244
+    ],
+    "end_latlng": [
+      37.815078,
+      -122.189481
+    ],
+    "elev_difference": 134.7,
+    "distance": 890.8,
+    "points": "q`yeF`vvhVHu@RCb@dAPXLzAUr@u@d@k@j@e@bBQ~@]`AIpAPx@EbCd@vCQjAD~AdA`DHHJPhAn@p@Vn@n@\\Nh@Nj@BFBGF",
+    "starred": false
+  },
+  {
+    "id": 333801,
+    "resource_state": 2,
+    "name": "Old La Honda - Mile 1",
+    "climb_category": 1,
+    "climb_category_desc": "4",
+    "avg_grade": 7.0,
+    "start_latlng": [
+      37.395515,
+      -122.247815
+    ],
+    "end_latlng": [
+      37.390213,
+      -122.246784
+    ],
+    "elev_difference": 112.8,
+    "distance": 1602.2,
+    "points": "}xfcFzociVh@`@r@`@|@H|@^h@Hj@P\\Ad@ObBLt@PPLp@ZRRh@LRBFADCFQ?SAIc@g@aAsAe@mAa@w@GO?OBUz@cBTu@jAkBHITMl@Q`@Ql@e@RG~@GjA]d@[VYh@a@\\MrADd@LRBTGXUJ?RP^d@NDJALM^eALINDDF?JMjAI\\QVcBpAqAx@c@r@s@p@wBlA",
+    "starred": false
+  }
+]

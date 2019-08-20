@@ -1,0 +1,28 @@
+[
+  {
+    "id": 2847,
+    "name": "Run in Reims Semi-Marathon",
+    "start_date_local": "2019-10-20T08:30:00Z",
+    "distance": 21097.0,
+    "city": "Reims",
+    "state": "",
+    "country": "France",
+    "measurement_preference": "",
+    "running_race_type": 0,
+    "url": "2019-run-in-reims-semimarathon",
+    "resource_state": 2
+  },
+  {
+    "id": 2819,
+    "name": "Yorkshire Marathon",
+    "start_date_local": "2019-10-20T09:30:00Z",
+    "distance": 42195.0,
+    "city": "York",
+    "state": "",
+    "country": "United Kingdom",
+    "measurement_preference": "",
+    "running_race_type": 0,
+    "url": "2019-yorkshire-marathon",
+    "resource_state": 2
+  }
+]

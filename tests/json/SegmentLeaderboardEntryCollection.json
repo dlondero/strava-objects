@@ -1,0 +1,26 @@
+[
+  {
+    "athlete_name": "Nicola G.",
+    "elapsed_time": 686,
+    "moving_time": 686,
+    "start_date": "2015-10-25T08:40:18Z",
+    "start_date_local": "2015-10-25T09:40:18Z",
+    "rank": 1
+  },
+  {
+    "athlete_name": "Volpe 2.",
+    "elapsed_time": 698,
+    "moving_time": 698,
+    "start_date": "2015-10-25T07:39:55Z",
+    "start_date_local": "2015-10-25T08:39:55Z",
+    "rank": 2
+  },
+  {
+    "athlete_name": "Tiziano M.",
+    "elapsed_time": 712,
+    "moving_time": 712,
+    "start_date": "2015-10-11T14:19:14Z",
+    "start_date_local": "2015-10-11T16:19:14Z",
+    "rank": 3
+  }
+]

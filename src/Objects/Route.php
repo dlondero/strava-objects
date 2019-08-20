@@ -41,8 +41,8 @@ class Route
         $instance->starred = (bool)$parameters['starred'];
         $instance->type = (int)$parameters['type'];
         $instance->subType = (int)$parameters['sub_type'];
-        $instance->segments = $parameters['segments'] ? Collection::create($parameters['segments'], SummarySegmentCollection::class) : null;
-        $instance->directions = $parameters['directions'] ? Collection::create($parameters['directions'], RouteDirectionCollection::class) : null;
+        $instance->segments = isset($parameters['segments']) ? Collection::create($parameters['segments'], SummarySegmentCollection::class) : null;
+        $instance->directions = isset($parameters['directions']) ? Collection::create($parameters['directions'], RouteDirectionCollection::class) : null;
 
         return $instance;
     }

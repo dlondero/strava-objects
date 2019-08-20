@@ -27,7 +27,7 @@ class DetailedSegmentEffort
     private SummarySegment $segment;
     private ?int $komRank;
     private ?int $prRank;
-    private bool $hidden;
+    private ?bool $hidden;
 
     private function __construct()
     {
@@ -49,15 +49,15 @@ class DetailedSegmentEffort
         $instance->movingTime = (int)$parameters['moving_time'];
         $instance->startIndex = (int)$parameters['start_index'];
         $instance->endIndex = (int)$parameters['end_index'];
-        $instance->averageCadence = $parameters['average_cadence'] ? (float)$parameters['average_cadence'] : null;
-        $instance->averageWatts = $parameters['average_watts'] ? (float)$parameters['average_watts'] : null;
-        $instance->deviceWatts = $parameters['device_watts'] ? (bool)$parameters['device_watts'] : null;
+        $instance->averageCadence = isset($parameters['average_cadence']) ? (float)$parameters['average_cadence'] : null;
+        $instance->averageWatts = isset($parameters['average_watts']) ? (float)$parameters['average_watts'] : null;
+        $instance->deviceWatts = isset($parameters['device_watts']) ? (bool)$parameters['device_watts'] : null;
         $instance->averageHeartrate = isset($parameters['average_heartrate']) ? (float)$parameters['average_heartrate'] : null;
         $instance->maxHeartrate = isset($parameters['max_heartrate']) ? (float)$parameters['max_heartrate'] : null;
         $instance->segment = SummarySegment::create($parameters['segment']);
-        $instance->komRank = $parameters['kom_rank'] ? (int)$parameters['kom_rank'] : null;
-        $instance->prRank = $parameters['pr_rank'] ? (int)$parameters['pr_rank'] : null;
-        $instance->hidden = (bool)$parameters['hidden'];
+        $instance->komRank = isset($parameters['kom_rank']) ? (int)$parameters['kom_rank'] : null;
+        $instance->prRank = isset($parameters['pr_rank']) ? (int)$parameters['pr_rank'] : null;
+        $instance->hidden = isset($parameters['hidden']) ? (bool)$parameters['hidden'] : null;
 
         return $instance;
     }

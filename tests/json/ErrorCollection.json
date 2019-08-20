@@ -1,0 +1,22 @@
+[
+  {
+    "resource": "Activity",
+    "field": "name",
+    "code": "missing_field"
+  },
+  {
+    "resource": "Activity",
+    "field": "elapsed_time",
+    "code": "missing_field"
+  },
+  {
+    "resource": "Activity",
+    "field": "type",
+    "code": "missing_field"
+  },
+  {
+    "resource": "Activity",
+    "field": "start",
+    "code": "missing_field"
+  }
+]

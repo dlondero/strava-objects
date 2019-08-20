@@ -1,0 +1,73 @@
+[
+  {
+    "id": 5151704,
+    "resource_state": 2,
+    "name": "Via Marolins Climb",
+    "activity_type": "Run",
+    "distance": 698.4,
+    "average_grade": 7.0,
+    "maximum_grade": 19.8,
+    "elevation_high": 146.6,
+    "elevation_low": 98.0,
+    "start_latlng": [
+      46.138871,
+      13.196332
+    ],
+    "end_latlng": [
+      46.143233,
+      13.190475
+    ],
+    "start_latitude": 46.138871,
+    "start_longitude": 13.196332,
+    "end_latitude": 46.143233,
+    "end_longitude": 13.190475,
+    "climb_category": 0,
+    "city": "Province of Udine, Italy",
+    "state": "Friuli-Venezia Giulia",
+    "country": "Italy",
+    "private": false,
+    "hazardous": false,
+    "starred": true,
+    "pr_time": 201,
+    "athlete_pr_effort": {
+      "id": 22936768996,
+      "elapsed_time": 201,
+      "distance": 688.3,
+      "start_date": "2017-04-12T07:02:58Z",
+      "start_date_local": "2017-04-12T09:02:58Z",
+      "is_kom": false
+    },
+    "starred_date": "2019-08-20T13:47:57Z"
+  },
+  {
+    "id": 12651664,
+    "resource_state": 2,
+    "name": "Rif.Tolazzi - Rif. Lambertenghi (sentiero)",
+    "activity_type": "Hike",
+    "distance": 2642.4,
+    "average_grade": 20.9,
+    "maximum_grade": 49.2,
+    "elevation_high": 1931.0,
+    "elevation_low": 1379.0,
+    "start_latlng": [
+      46.592234,
+      12.868219
+    ],
+    "end_latlng": [
+      46.607592,
+      12.86805
+    ],
+    "start_latitude": 46.592234,
+    "start_longitude": 12.868219,
+    "end_latitude": 46.607592,
+    "end_longitude": 12.86805,
+    "climb_category": 3,
+    "city": null,
+    "state": "Friuli-Venezia Giulia",
+    "country": "Italy",
+    "private": false,
+    "hazardous": false,
+    "starred": true,
+    "starred_date": "2019-08-20T13:50:32Z"
+  }
+]

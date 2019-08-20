@@ -11,7 +11,7 @@ class Lap
     private int $resourceState;
     private MetaActivity $activity;
     private MetaAthlete $athlete;
-    private float $averageCadence;
+    private ?float $averageCadence;
     private float $averageSpeed;
     private float $distance;
     private int $elapsedTime;
@@ -41,7 +41,7 @@ class Lap
         $instance->resourceState = (int)$parameters['id'];
         $instance->activity = MetaActivity::create($parameters['activity']);
         $instance->athlete = MetaAthlete::create($parameters['athlete']);
-        $instance->averageCadence = (float)$parameters['average_cadence'];
+        $instance->averageCadence = isset($parameters['average_cadence']) ? (float)$parameters['average_cadence'] : null;
         $instance->averageSpeed = (float)$parameters['average_speed'];
         $instance->distance = (float)$parameters['distance'];
         $instance->elapsedTime = (int)$parameters['elapsed_time'];

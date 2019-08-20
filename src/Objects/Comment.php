@@ -26,7 +26,7 @@ class Comment
         $instance->activityId = (int)$parameters['activity_id'];
         $instance->postId = $parameters['post_id'] ? (int)$parameters['post_id'] : null;
         $instance->text = (string)$parameters['text'];
-        $instance->athlete = SummaryAthlete::fromComment($parameters['athlete']);
+        $instance->athlete = SummaryAthlete::create($parameters['athlete']);
         $instance->createdAt = StravaDateTimeImmutable::createFromISO8601($parameters['created_at']);
 
         return $instance;

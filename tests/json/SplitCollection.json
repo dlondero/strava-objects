@@ -1,0 +1,29 @@
+[
+  {
+    "distance": 1000.6,
+    "elapsed_time": 671,
+    "elevation_difference": 152.3,
+    "moving_time": 671,
+    "split": 1,
+    "average_speed": 1.49,
+    "pace_zone": 0
+  },
+  {
+    "distance": 1000.1,
+    "elapsed_time": 718,
+    "elevation_difference": 89.6,
+    "moving_time": 718,
+    "split": 2,
+    "average_speed": 1.39,
+    "pace_zone": 0
+  },
+  {
+    "distance": 1000.6,
+    "elapsed_time": 908,
+    "elevation_difference": 267.1,
+    "moving_time": 908,
+    "split": 3,
+    "average_speed": 1.1,
+    "pace_zone": 0
+  }
+]

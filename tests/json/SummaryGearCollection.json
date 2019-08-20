@@ -1,0 +1,30 @@
+[
+  {
+    "id": "g4709904",
+    "primary": false,
+    "name": "Nike wildhorse 5",
+    "resource_state": 2,
+    "distance": 72905.0
+  },
+  {
+    "id": "g4465474",
+    "primary": true,
+    "name": "Brooks Glycerin 16 Orange",
+    "resource_state": 2,
+    "distance": 492908.0
+  },
+  {
+    "id": "g4546234",
+    "primary": false,
+    "name": "Salomon Sense Ride 2",
+    "resource_state": 2,
+    "distance": 67472.0
+  },
+  {
+    "id": "g2610333",
+    "primary": false,
+    "name": "North Face ultra distance",
+    "resource_state": 2,
+    "distance": 512017.0
+  }
+]

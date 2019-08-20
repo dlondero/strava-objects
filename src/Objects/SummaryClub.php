@@ -20,9 +20,9 @@ class SummaryClub
     private bool $featured;
     private bool $verified;
     private string $url;
-    private string $membership;
-    private bool $admin;
-    private bool $owner;
+    private ?string $membership;
+    private ?bool $admin;
+    private ?bool $owner;
 
     private function __construct()
     {
@@ -48,9 +48,9 @@ class SummaryClub
         $instance->featured = (bool)$parameters['featured'];
         $instance->verified = (bool)$parameters['verified'];
         $instance->url = (string)$parameters['url'];
-        $instance->membership = (string)$parameters['membership'];
-        $instance->admin = (bool)$parameters['admin'];
-        $instance->owner = (bool)$parameters['owner'];
+        $instance->membership = isset($parameters['membership']) ? (string)$parameters['membership'] : null;
+        $instance->admin = isset($parameters['admin']) ? (bool)$parameters['admin'] : null;
+        $instance->owner = isset($parameters['owner']) ? (bool)$parameters['owner'] : null;
 
         return $instance;
     }
